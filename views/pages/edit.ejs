@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 20px;
+        }
+        .card {
+            border-radius: 10px;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Movie Form</a>
+            <a  href="/viewMovie" class="btn btn-outline-light">Go Back</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="card shadow-sm p-4">
+            <form class="form-horizontal" method="post" action="/update/<%= movies.id %>" enctype="multipart/form-data">
+                <div class="card-body">
+                    <h4 class="card-title text-center">Movie Info</h4>
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Movie Title</label>
+                        <input type="text" class="form-control" value="<%= movies.title %>" id="title" name="title" placeholder="Movie Title Here" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="thumbnail" class="form-label">Thumbnail</label>
+                        <input type="file" class="form-control" id="thumbnail" value="<%= movies.thumbnail %>" name="thumbnail" />
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="category" class="col-sm-3 text-end control-label col-form-label">Category</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="category" name="category">
+                                <option value="">Select Category</option>
+                                <option value="Action" <%= movies.category === "Action" ? "selected" : "" %>>Action</option>
+                                <option value="Comedy" <%= movies.category === "Comedy" ? "selected" : "" %>>Comedy</option>
+                                <option value="Drama" <%= movies.category === "Drama" ? "selected" : "" %>>Drama</option>
+                                <option value="Horror" <%= movies.category === "Horror" ? "selected" : "" %>>Horror</option>
+                                <option value="Romance" <%= movies.category === "Romance" ? "selected" : "" %>>Romance</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Fix for Description -->
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description"><%= movies.description %></textarea>
+                    </div>
+                    
+                </div>
+                <div class="border-top pt-3 text-center">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

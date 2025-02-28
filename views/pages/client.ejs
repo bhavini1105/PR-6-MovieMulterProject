@@ -1,0 +1,160 @@
+<%- include('../partials/clientHeader') %>
+
+
+
+<% let staticMovies=[ { title:"random" ,thumbnail: "/assets/slideimg1.jpg" }, 
+        {title:"random", thumbnail: "/assets/slideimg2.jpg" },
+        {title:"random",thumbnail: "/assets/slideimg3.jpg" },
+        {title:"random" ,thumbnail: "/assets/slideimg4.jpg" },
+
+]; %>
+
+<% let cardMovies=[ { title:"random", thumbnail: "/assets/slideimg1.jpg" }, 
+        { title:"random",thumbnail: "/assets/slideimg2.jpg" },
+        { title:"random" ,thumbnail: "/assets/slideimg3.jpg" },
+
+]; %>
+
+<main class="main-content">
+				<div class="container">
+					<div class="page">
+						<div class="row">
+							<div class="col-md-9">
+								<div class="slider">
+									<ul class="slides">
+
+										<% if(movies.length >= 4) { %>
+											<% movies.forEach((movie , index)=>{%> 
+												<li><a href="/about/<%= movie.title %>"><img src="<%= movie.thumbnail %>" alt="Slide "></a></li>
+											<% })  %>
+										<% } else{ %>
+											<% staticMovies.forEach((movie , index)=>{%> 
+												<li><a href="/about/<%= movie.title %>"><img src="<%= movie.thumbnail %>" alt="Slide "></a></li>
+											<% })  %> 
+										<% } %>
+
+										
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<% if(movies.length >= 4) { %>
+									<% movies.slice(0, 3).forEach((movie , index)=>{%> 
+										<div class="row">
+											<div class="col-sm-6 col-md-3">
+												<div class="latest-movie">
+													<a href="/about/<%= movie.title %>"><img src="<%= movie.thumbnail %>" alt="Slide "></a>
+												</div>
+												</div>
+												</div>
+										<% })  %>
+									<% } else{ %>
+										<% cardMovies.forEach((movie , index)=>{%> 
+										<div class="row">
+											<div class="col-sm-6 col-md-3">
+												<div class="latest-movie">
+													<a href="/about/<%= movie.title %>"><img src="<%= movie.thumbnail %>" alt="Slide "></a>
+												</div>
+												</div>
+												</div>
+										<% })  %> 
+									<% } %>
+								</div>
+							</div>
+						</div> <!-- .row -->
+						<div class="row">
+
+							<% if(movies.length > 4) { %>
+								<% movies.forEach((movie , index)=>{%> 
+									<div class="col-sm-6 col-md-3">
+										<div class="latest-movie">
+											<a href="/about/<%= movie.title %>"><img src="<%= movie.thumbnail %>" alt="Slide "></a>
+										</div>
+									</div>
+								<% })  %>
+							<% } else{ %>
+								<% staticMovies.forEach((movie , index)=>{%> 
+									<div class="col-sm-6 col-md-3">
+										<div class="latest-movie">
+											<a href="/about/<%= movie.title %>"><img src="<%= movie.thumbnail %>" alt="Slide "></a>
+										</div>
+									</div>
+								<% })  %> 
+							<% } %>
+
+						</div> 
+						
+						<div class="row">
+							<div class="col-md-4">
+								<h2 class="section-title">December premiere</h2>
+								<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+								<ul class="movie-schedule">
+									<li>
+										<div class="date">16/12</div>
+										<h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+									</li>
+									<li>
+										<div class="date">16/12</div>
+										<h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+									</li>
+									<li>
+										<div class="date">16/12</div>
+										<h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+									</li>
+									<li>
+										<div class="date">16/12</div>
+										<h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+									</li>
+								</ul> <!-- .movie-schedule -->
+							</div>
+							<div class="col-md-4">
+								<h2 class="section-title">November premiere</h2>
+								<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+								<ul class="movie-schedule">
+									<li>
+										<div class="date">16/12</div>
+										<h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+									</li>
+									<li>
+										<div class="date">16/12</div>
+										<h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+									</li>
+									<li>
+										<div class="date">16/12</div>
+										<h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+									</li>
+									<li>
+										<div class="date">16/12</div>
+										<h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+									</li>
+								</ul> <!-- .movie-schedule -->
+							</div>
+							<div class="col-md-4">
+								<h2 class="section-title">October premiere</h2>
+								<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+								<ul class="movie-schedule">
+									<li>
+										<div class="date">16/12</div>
+										<h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+									</li>
+									<li>
+										<div class="date">16/12</div>
+										<h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+									</li>
+									<li>
+										<div class="date">16/12</div>
+										<h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+									</li>
+									<li>
+										<div class="date">16/12</div>
+										<h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+									</li>
+								</ul> <!-- .movie-schedule -->
+							</div>
+						</div>
+						<div>
+						</div>
+					</div>
+				</div> <!-- .container -->
+			</main>
+			<%- include('../partials/clientfooter') %>

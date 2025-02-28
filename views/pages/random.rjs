@@ -1,0 +1,114 @@
+
+<div class="col-md-3">
+<div class="row">
+    <div class="col-sm-6 col-md-12">
+        <div class="latest-movie">
+            <a href="#"><img src="/assets/slideimg1.jpg" alt="Movie 1"></a>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-12">
+        <div class="latest-movie">
+            <a href="#"><img src="/assets/slideimg2.jpg" alt="Movie 2"></a>
+        </div>
+    </div>
+</div>
+</div>
+</div> <!-- .row -->
+<div class="row">
+<div class="col-sm-6 col-md-3">
+<div class="latest-movie">
+    <a href="#"><img src="/assets/slideimg3.jpg" alt="Movie 3"></a>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="latest-movie">
+    <a href="#"><img src="/assets/slideimg1.jpg" alt="Movie 4"></a>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="latest-movie">
+    <a href="#"><img src="/assets/slideimg2.jpg" alt="Movie 5"></a>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="latest-movie">
+    <a href="#"><img src="/assets/slideimg3.jpg" alt="Movie 6"></a>
+</div>
+</div>
+</div> <!-- .row -->
+
+<div class="row">
+<div class="col-md-4">
+<h2 class="section-title">December premiere</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+<ul class="movie-schedule">
+    <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+    </li>
+    <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+    </li>
+    <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+    </li>
+    <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+    </li>
+</ul> <!-- .movie-schedule -->
+</div>
+<div class="col-md-4">
+<h2 class="section-title">November premiere</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+<ul class="movie-schedule">
+    <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+    </li>
+    <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+    </li>
+    <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+    </li>
+    <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+    </li>
+</ul> <!-- .movie-schedule -->
+</div>
+<div class="col-md-4">
+<h2 class="section-title">October premiere</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+<ul class="movie-schedule">
+    <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+    </li>
+    <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+    </li>
+    <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+    </li>
+    <li>
+        <div class="date">16/12</div>
+        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
+    </li>
+</ul> <!-- .movie-schedule -->
+</div>
+</div>
+<% let staticMovies=[ { thumbnail: "/assets/avengers.jpg" }, 
+        { thumbnail: "/assets/pathan.jpg" },
+        {thumbnail: "/assets/spiderman.jpg" },
+        {thumbnail: "/assets/mardani.jpg" },
+
+]; %>
+
