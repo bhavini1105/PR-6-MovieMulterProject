@@ -35,7 +35,7 @@ Middleware: Multer, Cookie-Parser, Body-Parser
 
 3️⃣ Set Up MongoDB Connection Make sure MongoDB is running and update configs/database.js with your database URL:
 
-4️⃣ Start the Server : Server will start at http://localhost:8095
+4️⃣ Start the Server : Server will start at "http://localhost:8095"
 
 🔑 Authentication
 
