@@ -1,57 +1,95 @@
-# PR-6-MovieMulterProject
+MovieMulterProject 🎬
 
-Movie Management System
 
-📌 Project Overview
 
-This is a Movie Management System built using Node.js, Express, MongoDB, and EJS. It allows administrators to manage movies, including adding, updating, and deleting records.
+Description 📌
+ 
+ 
+MovieMulterProject is a Node.js and Express.js based web application for managing movie details, including uploading images using Multer. It features an authentication system for admin users and allows public users to view movies without authentication.
 
-🚀 Features
+Features 🚀
 
-User Authentication (Login, Register, Logout)
+Public access to view movies 🎥
 
-Admin Panel for Managing Movies
+Admin authentication for managing movies 🔑
 
-File Uploads for Movie Posters
+Add, update, and delete movie records 📝
 
-Secure Cookie-based Authentication
+Upload movie thumbnails using Multer 🖼️
 
-Middleware for Access Control
+Secure login system with cookies 🍪
 
-Client and Admin Routing
+Technologies Used 🛠️
 
-🛠 Tech Stack
+Node.js & Express.js (Backend)
 
-Backend: Node.js, Express.js, MongoDB (Mongoose)
+MongoDB & Mongoose (Database)
 
-Frontend: EJS, HTML, CSS
+Multer (Image upload handling)
 
-Middleware: Multer, Cookie-Parser, Body-Parser
-🔧 Installation & Setup
+EJS (Templating Engine)
 
-1️⃣ Clone the Repository
+CSS (Styling)
 
-2️⃣ Install Dependencies
+Installation & Setup ⚙️
 
-3️⃣ Set Up MongoDB Connection Make sure MongoDB is running and update configs/database.js with your database URL:
+Clone the Repository:
 
-4️⃣ Start the Server : Server will start at "http://localhost:8095"
+git clone https://github.com/bhavini1105/PR-6-MovieMulterProject.git
+cd PR-6-MovieMulterProject
 
-🔑 Authentication
+Install Dependencies:
 
-Register: /register
+npm install
 
-Login: /login
+Setup Environment Variables:
 
-Logout: /logout
+Create a .env file in the root directory and add necessary configurations.
 
-🎬 Movie Management
+Start the Server:
 
-View Movies: /viewMovies
+npm start
 
-Add New Movie: /movieForm
+The server will start at: https://pr-6-moviemulterproject.onrender.com/client
 
-Edit Movie: /edit/:id
+🔐 Admin Credentials
 
-Delete Movie: /delete/:id
+Use the following credentials to log in as an admin:
+
+Username: admin
+
+Password: 12345
+
+
+
+Folder Structure 📂
+
+PR-6-MovieMulterProject/
+│-- controllers/        # Route logic
+│-- models/             # Mongoose schemas
+│-- views/              # EJS templates
+│-- public/             # Static files (CSS, Images)
+│-- routers/            # Routes handling
+│-- middlewares/        # Authentication & Upload Handling
+│-- configs/            # Database config
+│-- index.js            # Main entry file
+│-- package.json        # Dependencies
+
+Usage 🏗️
+
+Admin Login: Create an admin account via signup and then log in.
+
+Movie Management: Admins can add, update, or delete movies.
+
+Public Access: Users can browse movies without logging in.
+
+Issues & Contributions 🤝
+
+Feel free to fork, clone, and contribute to improve this project! If you encounter issues, create a GitHub issue.
+
+License 📜
+
+This project is MIT Licensed. See LICENSE for details.
+
+
 
