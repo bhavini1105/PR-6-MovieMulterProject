@@ -62,19 +62,6 @@ Password: 12345
 
 
 
-Folder Structure 📂
-
-PR-6-MovieMulterProject/
-│-- controllers/        # Route logic
-│-- models/             # Mongoose schemas
-│-- views/              # EJS templates
-│-- public/             # Static files (CSS, Images)
-│-- routers/            # Routes handling
-│-- middlewares/        # Authentication & Upload Handling
-│-- configs/            # Database config
-│-- index.js            # Main entry file
-│-- package.json        # Dependencies
-
 Usage 🏗️
 
 Admin Login: Create an admin account via signup and then log in.
