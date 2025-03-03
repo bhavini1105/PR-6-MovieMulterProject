@@ -1,5 +1,12 @@
 <%- include('../partials/clientHeader') %>
 
+<% let staticMovies=[ { title:"random" ,thumbnail: "/assets/slideimg1.jpg" , id :"1"}, 
+        {title:"random", thumbnail: "/assets/slideimg2.jpg" , id :"2"},
+        {title:"random",thumbnail: "/assets/slideimg3.jpg", id :"3" },
+        {title:"random" ,thumbnail: "/assets/slideimg4.jpg" , id :"4" },
+
+]; %>
+
 	<main class="main-content">
 		<div class="container">
 			<div class="page">
@@ -28,7 +35,7 @@
 						<% movies.forEach((movie , index)=>{%>
 							<div class="movie">
 								<figure class="movie-poster"><img src="<%= movie.thumbnail %>" alt="#" style="height: 300px; width: 350px;"></figure>
-								<div class="movie-title"><a href="/about">
+								<div class="movie-title"><a href="/movierevie/<%= movie.id %>">
 										<%= movie.title %>
 									</a></div>
 								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
@@ -39,7 +46,7 @@
 										<div class="movie">
 											<figure class="movie-poster"><img src="<%= movie.thumbnail %>" alt="#" style="height: 300px; width: 350px;">
 											</figure>
-											<div class="movie-title"><a href="/about">
+											<div class="movie-title"><a href="/movierevie/<%= movie.id %>">
 													<%= movie.title %>
 												</a></div>
 											<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.
@@ -47,47 +54,6 @@
 										</div>
 										<% }) %>
 											<% } %>
-
-												<!-- <div class="movie">
-								<figure class="movie-poster"><img src="dummy/thumb-3.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">Maleficient</a></div>
-								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/thumb-4.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">The adventure of Tintin</a></div>
-								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/thumb-5.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">Hobbit</a></div>
-								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/thumb-6.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">Exists</a></div>
-								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/thumb-1.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">Drive hard</a></div>
-								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/thumb-2.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">Robocop</a></div>
-								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/thumb-7.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">Life of Pi</a></div>
-								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/thumb-8.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">The Colony</a></div>
-								<p>Sed ut perspiciatis unde omnis iste natus error voluptatem doloremque.</p>
-							</div> -->
 				</div> <!-- .movie-list -->
 
 				<div class="pagination">

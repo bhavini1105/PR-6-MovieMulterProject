@@ -5,7 +5,10 @@ const userAuth = require("../middlewares/userAuthentication");
 
 const movieRouter = Router();
 
-// movieRouter.use(userAuth);
+movieRouter.get("/", movieController.viewMovie);
+
+
+movieRouter.use(userAuth);
 movieRouter.get("/admin", movieController.homePage);
 movieRouter.get("/movieForm", movieController.movieForm);
 movieRouter.post("/created", imageUpload, movieController.form);

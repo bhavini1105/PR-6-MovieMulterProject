@@ -2,6 +2,10 @@ const movieModel = require("../models/movieSchema");
 const fs = require('fs');
 const path = require('path');
 
+module.exports.viewMovie = (req,res)=>{
+    return res.render('pages/client');
+}
+
 module.exports.homePage = (req, res) => {
     return res.render('index');
 };

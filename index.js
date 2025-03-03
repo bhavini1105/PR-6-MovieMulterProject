@@ -17,9 +17,9 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(cookieParser());
 
 app.use('/',clientRedirect);
+app.use('/',require('./routers/clientRouter')); 
 app.use('/',require('./routers/adminRouter'));
 app.use('/',require('./routers/movieRouter'));
-app.use('/',require('./routers/clientRouter')); 
 
 app.listen(port ,()=>{
     db();

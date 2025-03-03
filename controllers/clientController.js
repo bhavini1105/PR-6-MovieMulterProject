@@ -30,6 +30,18 @@ module.exports.aboutPage = async (req, res) => {
     }
 };
 
+module.exports.singlePage = async (req, res) => {
+    const { id } = req.params;
+  
+    try {
+      const movie = await movieModel.findById(id);
+      res.render("pages/singleMovie", { movie });
+    } catch (error) {
+      console.log(error.message);
+      res.render("pages/singleMovie", { movie: {} });
+    }
+  };
+
 module.exports.reviewPage = async(req, res) => {
 
     let movies = await movieModel.find();
